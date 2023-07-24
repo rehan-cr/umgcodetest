@@ -294,6 +294,9 @@
         pauseSlideshow: `{{ 'sections.slideshow.pause_slideshow' | t }}`,
         playSlideshow: `{{ 'sections.slideshow.play_slideshow' | t }}`,
       };
+      var Shopify = Shopify || {};
+      Shopify.money_format = "{{ shop.money_format }}";
+      Shopify.money_with_currency_format = "{{ shop.money_with_currency_format }}"
     </script>
 
     {%- if settings.predictive_search_enabled -%}

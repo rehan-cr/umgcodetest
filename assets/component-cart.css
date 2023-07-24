@@ -221,3 +221,8 @@ cart-items {
     gap: 1rem;
   }
 }
+
+.disabled {
+  cursor: not-allowed;
+  opacity: .5;
+}

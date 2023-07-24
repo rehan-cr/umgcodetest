@@ -20,7 +20,7 @@
 {%- endstyle -%}
 
 {%- unless settings.cart_type == 'drawer' -%}
-  <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'cart-custom.js' | asset_url }}" defer="defer"></script>
 {%- endunless -%}
 
 <cart-items class="page-width{% if cart == empty %} is-empty{% else %} section-{{ section.id }}-padding{% endif %}">
@@ -258,6 +258,7 @@
                       <cart-remove-button
                         id="Remove-{{ item.index | plus: 1 }}"
                         data-index="{{ item.index | plus: 1 }}"
+                        data-variant="{{ item.variant_id }}"
                       >
                         <a
                           href="{{ item.url_to_remove }}"
@@ -285,7 +286,7 @@
                   </td>
 
                   <td class="cart-item__totals right small-hide">
-                    <div class="loading-overlay hidden">
+                    <div class="cart-item__totals--loading loading-overlay hidden">
                       <div class="loading-overlay__spinner">
                         <svg
                           aria-hidden="true"
@@ -306,19 +307,19 @@
                             {{ 'products.product.price.regular_price' | t }}
                           </dt>
                           <dd>
-                            <s class="cart-item__old-price price price--end">
+                            <s class="cart-item__old-price line-old_price price price--end">
                               {{ item.original_line_price | money }}
                             </s>
                           </dd>
                           <dt class="visually-hidden">
                             {{ 'products.product.price.sale_price' | t }}
                           </dt>
-                          <dd class="price price--end">
+                          <dd class="cart-item__final-price price price--end">
                             {{ item.final_line_price | money }}
                           </dd>
                         </dl>
                       {%- else -%}
-                        <span class="price price--end">
+                        <span class="cart-item__final-price price price--end">
                           {{ item.original_line_price | money }}
                         </span>
                       {%- endif -%}
