@@ -1,0 +1,241 @@
+{{ 'shoppable-lookpage.css' | asset_url | stylesheet_tag }}
+
+<div class="shoppable-lookpage__wrapper page-width">
+  <div class="shoppable-lookpage__title--wrapper">
+    <h2 class="shoppable-lookpage__title">{{ section.settings.title }}</h2>
+    <div class="shoppable-lookpage__image--container">
+      {% for block in section.blocks %}
+      <div class="shoppable-lookpage__image--wrapper" data-modal>
+        {% if block.settings.image %}
+          {{ block.settings.image | image_url: width: 300 | image_tag: loading: "lazy", class: "shoppable_img" }}
+        {% else %} 
+          {{ "product-1" | placeholder_svg_tag: "placeholder-svg placeholder" }}
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% comment %} Modal starts here {% endcomment %}
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-body">
+      <div class="close">&times;</div>
+      {% for block in section.blocks %}
+      <div class="modal-img__container" data-modal-img-container>
+        {% if block.settings.image %}
+          {{ block.settings.image | image_url: width: 400 | image_tag: loading: "lazy", class: "shoppable_img" }}
+        {% else %} 
+          {{ "product-1" | placeholder_svg_tag: "placeholder-svg placeholder" }}
+        {% endif %}
+        <div class="modal-product__container">
+          <div class="modal-pulse__wrapper pulse-pos_1">
+          {% if block.settings.product_1 %}
+            {% render 'pulse' %}
+            {% render 'modal-product-card' product: block.settings.product_1 %}
+          {% endif %}
+          </div>
+          <div class="modal-pulse__wrapper pulse-pos_2">
+          {% if block.settings.product_2 %}
+            {% render 'pulse' %}
+            {% render 'modal-product-card' product: block.settings.product_2 %}
+          {% endif %}
+          </div>
+          <div class="modal-pulse__wrapper pulse-pos_3">
+          {% if block.settings.product_3 %}
+            {% render 'pulse' %}
+            {% render 'modal-product-card' product: block.settings.product_3 %}
+          {% endif %}
+          </div>
+        </div>
+      </div>
+      <style>
+        .pulse-pos_1 {
+          top: {{ block.settings.pulse_top_1 }}%;
+          left: {{ block.settings.pulse_left_1 }}%;
+        }
+        .pulse-pos_2 {
+          top: {{ block.settings.pulse_top_2 }}%;
+          left: {{ block.settings.pulse_left_2 }}%;
+        }
+        .pulse-pos_3 {
+          top: {{ block.settings.pulse_top_3 }}%;
+          left: {{ block.settings.pulse_left_3 }}%;
+        }
+      </style>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% comment %} Modal ends here {% endcomment %}
+
+<script>
+
+  const imgWrapper = document.querySelectorAll('[data-modal]')
+  const modal = document.getElementById('myModal');
+  const closeBtn = document.getElementsByClassName('close')[0];
+  const modalImgContainer = modal.querySelectorAll('[data-modal-img-container]')
+
+  imgWrapper.forEach((wrapper, index) => {
+    wrapper.addEventListener('click', () => {
+      modal.style.display = 'flex'
+      modalImgContainer[index].style.display = 'block'
+    });
+  });
+
+  // When the user clicks on <span> (x), close the modal
+  const modalClose = () => {
+    for (let i = 0; i < modalImgContainer.length; i++) {
+      modalImgContainer[i].style.display = 'none'
+    }
+    modal.style.display = 'none'
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.addEventListener('click', () => {
+  if(event.target == modal) {
+      modalClose()
+    }
+  })
+
+  // close the modal
+  closeBtn.addEventListener('click', modalClose)
+
+</script>
+
+{% schema %}
+{
+  "name": "t:sections.shoppable-lookpgae.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },
+    {
+      "type": "header",
+      "content": "Section title"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    }
+  ],
+  "blocks": [
+     {
+       "name": "Shoppable Image",
+       "type": "Image",
+       "settings": [
+         {
+           "type": "image_picker",
+           "id": "image",
+           "label": "Image"
+         },
+         {
+            "type": "header",
+            "content": "Product 1"
+         },
+         {
+           "type": "product",
+           "id": "product_1",
+           "label": "Product"
+         },
+         {
+           "type": "range",
+           "id": "pulse_top_1",
+           "label": "Vertical alignment",
+           "min": 0,
+           "max": 99,
+           "default":10
+         },
+         {
+           "type": "range",
+           "id": "pulse_left_1",
+           "label": "Horizontal Alignment",
+           "min": 0,
+           "max": 99,
+           "default":10
+         },
+         {
+            "type": "header",
+            "content": "Product 2"
+         },
+         {
+           "type": "product",
+           "id": "product_2",
+           "label": "Product"
+         },
+         {
+           "type": "range",
+           "id": "pulse_top_2",
+           "label": "Vertical alignment",
+           "min": 0,
+           "max": 99,
+           "default":20
+         },
+         {
+           "type": "range",
+           "id": "pulse_left_2",
+           "label": "Horizontal Alignment",
+           "min": 0,
+           "max": 99,
+           "default":40
+         },
+         {
+            "type": "header",
+            "content": "Product 3"
+         },
+         {
+           "type": "product",
+           "id": "product_3",
+           "label": "Product"
+         },
+         {
+           "type": "range",
+           "id": "pulse_top_3",
+           "label": "Vertical alignment",
+           "min": 0,
+           "max": 99,
+           "default":30
+         },
+         {
+           "type": "range",
+           "id": "pulse_left_3",
+           "label": "Horizontal Alignment",
+           "min": 0,
+           "max": 99,
+           "default":50
+         }
+       ]
+     }
+   ],
+  "presets": [
+    {
+      "name": "t:sections.shoppable-lookpgae.name"
+    }
+  ]
+}
+{% endschema %}

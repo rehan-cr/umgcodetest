@@ -1,1 +1,198 @@
-{"sections":{"6a3bb789-ce10-45f5-ae67-e2063ef8c76b":{"type":"image-banner","blocks":{"template--18309637636369__6a3bb789-ce10-45f5-ae67-e2063ef8c76b-168016437761699a6e-0":{"type":"heading","settings":{"heading":"Generated test data","heading_size":"h1"}},"template--18309637636369__6a3bb789-ce10-45f5-ae67-e2063ef8c76b-168016437761699a6e-1":{"type":"text","settings":{"text":"A theme and populated test store by Shopify to help you test commerce primitives.","text_style":"body"}},"template--18309637636369__6a3bb789-ce10-45f5-ae67-e2063ef8c76b-168016437761699a6e-2":{"type":"buttons","settings":{"button_label_1":"Shop products","button_link_1":"shopify:\/\/collections\/all","button_style_secondary_1":false,"button_label_2":"","button_link_2":"","button_style_secondary_2":false}}},"block_order":["template--18309637636369__6a3bb789-ce10-45f5-ae67-e2063ef8c76b-168016437761699a6e-0","template--18309637636369__6a3bb789-ce10-45f5-ae67-e2063ef8c76b-168016437761699a6e-1","template--18309637636369__6a3bb789-ce10-45f5-ae67-e2063ef8c76b-168016437761699a6e-2"],"custom_css":[],"settings":{"image":"shopify:\/\/shop_images\/theme_cover_image.jpg","image_overlay_opacity":0,"image_height":"medium","desktop_content_position":"middle-left","show_text_box":true,"desktop_content_alignment":"left","color_scheme":"background-1","image_behavior":"none","mobile_content_alignment":"center","stack_images_on_mobile":true,"show_text_below":true}}},"order":["6a3bb789-ce10-45f5-ae67-e2063ef8c76b"]}
+{
+  "sections": {
+    "6a3bb789-ce10-45f5-ae67-e2063ef8c76b": {
+      "type": "image-banner",
+      "blocks": {
+        "template--18309637636369__6a3bb789-ce10-45f5-ae67-e2063ef8c76b-168016437761699a6e-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Generated test data",
+            "heading_size": "h1"
+          }
+        },
+        "template--18309637636369__6a3bb789-ce10-45f5-ae67-e2063ef8c76b-168016437761699a6e-1": {
+          "type": "text",
+          "settings": {
+            "text": "A theme and populated test store by Shopify to help you test commerce primitives.",
+            "text_style": "body"
+          }
+        },
+        "template--18309637636369__6a3bb789-ce10-45f5-ae67-e2063ef8c76b-168016437761699a6e-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop products",
+            "button_link_1": "shopify:\/\/collections\/all",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18309637636369__6a3bb789-ce10-45f5-ae67-e2063ef8c76b-168016437761699a6e-0",
+        "template--18309637636369__6a3bb789-ce10-45f5-ae67-e2063ef8c76b-168016437761699a6e-1",
+        "template--18309637636369__6a3bb789-ce10-45f5-ae67-e2063ef8c76b-168016437761699a6e-2"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/theme_cover_image.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-left",
+        "show_text_box": true,
+        "desktop_content_alignment": "left",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "c8f0ba0f-ff7b-4ffd-a3a0-5da059b212a7": {
+      "type": "shoppable-lookpage",
+      "blocks": {
+        "6ca56fa8-459e-4a59-9213-ec60523c2873": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img1.jpg",
+            "product_1": "the-3p-fulfilled-snowboard",
+            "pulse_top_1": 10,
+            "pulse_left_1": 10,
+            "product_2": "the-collection-snowboard-hydrogen",
+            "pulse_top_2": 27,
+            "pulse_left_2": 40,
+            "product_3": "the-collection-snowboard-liquid",
+            "pulse_top_3": 30,
+            "pulse_left_3": 46
+          }
+        },
+        "9b4128b1-d9e3-40b3-a63e-fc205025edfc": {
+          "type": "Image",
+          "settings": {
+            "product_1": "chain-bracelet",
+            "pulse_top_1": 10,
+            "pulse_left_1": 10,
+            "product_2": "leather-anchor",
+            "pulse_top_2": 20,
+            "pulse_left_2": 40,
+            "product_3": "antique-drawers",
+            "pulse_top_3": 30,
+            "pulse_left_3": 59
+          }
+        },
+        "e6b22af1-fbfd-401d-b8aa-2fdd6bb02e8c": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img3.jpg",
+            "product_1": "bangle-bracelet",
+            "pulse_top_1": 10,
+            "pulse_left_1": 10,
+            "product_2": "bedside-table",
+            "pulse_top_2": 20,
+            "pulse_left_2": 40,
+            "product_3": "biodegradable-cardboard-pots",
+            "pulse_top_3": 30,
+            "pulse_left_3": 18
+          }
+        },
+        "5a8e9acb-ceb8-4750-82a4-4681a22a0ad3": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img9.jpg",
+            "product_1": "boho-earrings",
+            "pulse_top_1": 10,
+            "pulse_left_1": 10,
+            "product_2": "chequered-red-shirt",
+            "pulse_top_2": 20,
+            "pulse_left_2": 40,
+            "product_3": "choker-with-bead",
+            "pulse_top_3": 30,
+            "pulse_left_3": 28
+          }
+        },
+        "474deb42-c794-4f8e-8794-7b0a6436a1e1": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img5_2991929b-bb68-4cbb-b89f-86e30213abf2.jpg",
+            "product_1": "cream-sofa",
+            "pulse_top_1": 10,
+            "pulse_left_1": 10,
+            "product_2": "dark-denim-top",
+            "pulse_top_2": 20,
+            "pulse_left_2": 40,
+            "product_3": "ocean-blue-shirt",
+            "pulse_top_3": 30,
+            "pulse_left_3": 42
+          }
+        },
+        "2f943a6a-e862-4527-98b2-5df10c121271": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img6.jpg",
+            "product_1": "red-sports-tee",
+            "pulse_top_1": 10,
+            "pulse_left_1": 10,
+            "product_2": "floral-white-top",
+            "pulse_top_2": 20,
+            "pulse_left_2": 40,
+            "product_3": "yellow-sofa",
+            "pulse_top_3": 30,
+            "pulse_left_3": 8
+          }
+        },
+        "870e9316-d070-4692-a7b9-559da5409973": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img7.jpg",
+            "product_1": "wooden-outdoor-slats",
+            "pulse_top_1": 10,
+            "pulse_left_1": 10,
+            "product_2": "gardening-hand-trowel",
+            "pulse_top_2": 20,
+            "pulse_left_2": 40,
+            "product_3": "galaxy-earrings",
+            "pulse_top_3": 30,
+            "pulse_left_3": 50
+          }
+        },
+        "52ac9ace-5d4c-47de-b915-2c3bdfa54226": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img8.jpg",
+            "product_1": "blue-silk-tuxedo",
+            "pulse_top_1": 10,
+            "pulse_left_1": 10,
+            "product_2": "brown-throw-pillows",
+            "pulse_top_2": 20,
+            "pulse_left_2": 60,
+            "product_3": "striped-silk-blouse",
+            "pulse_top_3": 30,
+            "pulse_left_3": 11
+          }
+        }
+      },
+      "block_order": [
+        "6ca56fa8-459e-4a59-9213-ec60523c2873",
+        "9b4128b1-d9e3-40b3-a63e-fc205025edfc",
+        "e6b22af1-fbfd-401d-b8aa-2fdd6bb02e8c",
+        "5a8e9acb-ceb8-4750-82a4-4681a22a0ad3",
+        "474deb42-c794-4f8e-8794-7b0a6436a1e1",
+        "2f943a6a-e862-4527-98b2-5df10c121271",
+        "870e9316-d070-4692-a7b9-559da5409973",
+        "52ac9ace-5d4c-47de-b915-2c3bdfa54226"
+      ],
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "title": "Joe's Lookbook"
+      }
+    }
+  },
+  "order": [
+    "6a3bb789-ce10-45f5-ae67-e2063ef8c76b",
+    "c8f0ba0f-ff7b-4ffd-a3a0-5da059b212a7"
+  ]
+}

@@ -1,0 +1,13 @@
+
+<div class="modal-product">
+  <div class="modal-product__image--wrapper">
+    <a href="{{ product.url }}" class="modal-product__img--link">
+      {{ product | image_url: width: 100 | image_tag: loading: "lazy", class: "modal-product__image" }}
+    </a>
+  </div>
+  <a href="{{ product.url }}" class="modal-product__title">{{ product.title }}</a>
+  <div class="modal-product__price">{{ product.price | money }}</div>
+  <div class="modal-product__cta--wrapper">
+    <a href="{{ product.url }}" class="button button--primary modal-product__cta">Shop the look</a>
+  </div>
+</div>
