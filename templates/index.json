@@ -72,6 +72,7 @@
         "9b4128b1-d9e3-40b3-a63e-fc205025edfc": {
           "type": "Image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/img10.jpg",
             "product_1": "chain-bracelet",
             "pulse_top_1": 10,
             "pulse_left_1": 10,
