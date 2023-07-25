@@ -8,8 +8,8 @@
 - sections/main-cart-items.liquid
 
 ## Shoppable Lookpage - File changes:
--[assets/shoppable-lookpage.css]
--[sections/shoppable-lookpage.liquid]
--[snippets/modal-product-card.liquid]
--[snippets/pulse.liquid]
--[assets/lookpage-modal.js]
+- assets/shoppable-lookpage.css
+- sections/shoppable-lookpage.liquid
+- snippets/modal-product-card.liquid
+- snippets/pulse.liquid
+- assets/lookpage-modal.js
