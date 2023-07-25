@@ -1,0 +1,19 @@
+
+.upsell_product--table {
+  width: 100%;
+  display: table;
+  border-collapse: collapse;
+}
+
+.upsell-product__table-column {
+  width: 33.333%;
+  padding: 1em;
+  border: 0.1rem solid rgba(var(--color-foreground),.2);
+  text-align: center;
+}
+
+.upsell-product__image {
+  display: flex;
+  max-width: 100%;
+  margin: 0 auto;
+}

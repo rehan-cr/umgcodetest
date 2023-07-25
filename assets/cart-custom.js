@@ -1,16 +1,19 @@
 
+// Cart bubble/number updation
 const updateCartBubble = (item_count) => {
   let cartIconBubble = document.querySelector('#cart-icon-bubble')
   let cartCountBubble = cartIconBubble.querySelector('.cart-count-bubble span')
   cartCountBubble.innerHTML = item_count
 }
 
+// Cart subtotal updation
 const updateCartSubtotal = (subTotal) => {
   let mainCartFooter = document.querySelector('#main-cart-footer')
   let mainCartFooterSubtotal = mainCartFooter.querySelector('.totals__subtotal-value')
   mainCartFooterSubtotal.innerHTML = Shopify.Currency.formatMoney(subTotal, Shopify.money_with_currency_format);
 }
 
+// Product removal from Cart
 function cartRemove(e) {
   e.preventDefault();
   const cartRemoveButton = e.target.closest('cart-remove-button')
@@ -18,7 +21,7 @@ function cartRemove(e) {
   const dataSet = cartRemoveButton.dataset
   const variantId = dataSet.variant
   const tableRow = dataSet.index
-  
+
   const data = {
     id: variantId,
     quantity: 0,
@@ -44,6 +47,7 @@ function cartRemove(e) {
     });
 };
 
+// Product quantity change 
 function updateQuantity(e) {
   e.preventDefault()
   const plus = this.querySelector('.quantity__button[name="plus"]')
