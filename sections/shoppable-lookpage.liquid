@@ -1,4 +1,5 @@
 {{ 'shoppable-lookpage.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'lookpage-modal.js' | asset_url }}" defer="defer"></script>
 
 <div class="shoppable-lookpage__wrapper page-width">
   <div class="shoppable-lookpage__title--wrapper">
@@ -18,10 +19,10 @@
 </div>
 
 {% comment %} Modal starts here {% endcomment %}
-<div id="myModal" class="modal">
-  <div class="modal-content">
-    <div class="modal-body">
-      <div class="close">&times;</div>
+<div id="shoppable_modal" class="shoppable-modal">
+  <div class="shoppable-modal__content">
+    <div class="shoppable-modal__body">
+      <div class="shoppable-modal__close">&times;</div>
       {% for block in section.blocks %}
       <div class="modal-img__container" data-modal-img-container>
         {% if block.settings.image %}
@@ -63,46 +64,15 @@
           top: {{ block.settings.pulse_top_3 }}%;
           left: {{ block.settings.pulse_left_3 }}%;
         }
+        .shoppable-lookpage__image--wrapper::after {
+          content: '{{ section.settings.cta_label }}';
+        }
       </style>
       {% endfor %}
     </div>
   </div>
 </div>
 {% comment %} Modal ends here {% endcomment %}
-
-<script>
-
-  const imgWrapper = document.querySelectorAll('[data-modal]')
-  const modal = document.getElementById('myModal');
-  const closeBtn = document.getElementsByClassName('close')[0];
-  const modalImgContainer = modal.querySelectorAll('[data-modal-img-container]')
-
-  imgWrapper.forEach((wrapper, index) => {
-    wrapper.addEventListener('click', () => {
-      modal.style.display = 'flex'
-      modalImgContainer[index].style.display = 'block'
-    });
-  });
-
-  // When the user clicks on <span> (x), close the modal
-  const modalClose = () => {
-    for (let i = 0; i < modalImgContainer.length; i++) {
-      modalImgContainer[i].style.display = 'none'
-    }
-    modal.style.display = 'none'
-  }
-
-  // When the user clicks anywhere outside of the modal, close it
-  window.addEventListener('click', () => {
-  if(event.target == modal) {
-      modalClose()
-    }
-  })
-
-  // close the modal
-  closeBtn.addEventListener('click', modalClose)
-
-</script>
 
 {% schema %}
 {
@@ -112,36 +82,23 @@
   "settings": [
     {
       "type": "header",
-      "content": "t:sections.all.padding.section_padding_heading"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_top",
-      "default": 36
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_bottom",
-      "default": 36
-    },
-    {
-      "type": "header",
       "content": "Section title"
     },
     {
       "type": "text",
       "id": "title",
-      "label": "Title"
+      "label": "Title",
+      "default": "Lookbook"
+    },
+    {
+      "type": "header",
+      "content": "CTA"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "CTA Label",
+      "default": "Shop Now"
     }
   ],
   "blocks": [
@@ -166,18 +123,20 @@
          {
            "type": "range",
            "id": "pulse_top_1",
-           "label": "Vertical alignment",
+           "label": "Pulse vertical alignment",
            "min": 0,
            "max": 99,
-           "default":10
+           "default":10,
+           "info": "This is in percentage unit"
          },
          {
            "type": "range",
            "id": "pulse_left_1",
-           "label": "Horizontal Alignment",
+           "label": "Pulse horizontal Alignment",
            "min": 0,
            "max": 99,
-           "default":10
+           "default":10,
+           "info": "This is in percentage unit"
          },
          {
             "type": "header",
@@ -191,18 +150,20 @@
          {
            "type": "range",
            "id": "pulse_top_2",
-           "label": "Vertical alignment",
+           "label": "Pulse vertical alignment",
            "min": 0,
            "max": 99,
-           "default":20
+           "default":20,
+           "info": "This is in percentage unit"
          },
          {
            "type": "range",
            "id": "pulse_left_2",
-           "label": "Horizontal Alignment",
+           "label": "Pulse horizontal Alignment",
            "min": 0,
            "max": 99,
-           "default":40
+           "default":40,
+           "info": "This is in percentage unit"
          },
          {
             "type": "header",
@@ -216,18 +177,20 @@
          {
            "type": "range",
            "id": "pulse_top_3",
-           "label": "Vertical alignment",
+           "label": "Pulse vertical alignment",
            "min": 0,
            "max": 99,
-           "default":30
+           "default":30,
+           "info": "This is in percentage unit"
          },
          {
            "type": "range",
            "id": "pulse_left_3",
-           "label": "Horizontal Alignment",
+           "label": "Pulse horizontal Alignment",
            "min": 0,
            "max": 99,
-           "default":50
+           "default":50,
+           "info": "This is in percentage unit"
          }
        ]
      }
