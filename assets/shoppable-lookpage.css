@@ -1,4 +1,14 @@
 
+.shoppable-lookpage__wrapper {
+  padding-block: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .shoppable-lookpage__wrapper {
+    padding-block: 4rem;
+  }
+}
+
 .shoppable-lookpage__image--container {
   display: grid;
   grid-template-columns: repeat(2, minmax(auto, 1fr));
@@ -56,7 +66,7 @@
 }
 
 .shoppable-lookpage__image--wrapper::after {
-  content: "Shop Now";
+  content: 'Shop Now';
   position: absolute;
   top: 50%;
   left: 50%;
@@ -81,7 +91,7 @@
   transition: .75s all;
 }
 
-.modal {
+.shoppable-modal {
   display: none;
   justify-content: center;
   align-items: center;
@@ -95,7 +105,7 @@
   background-color: rgba(0,0,0,0.65);
 }
 
-.modal-content {
+.shoppable-modal__content {
   position: relative;
   background-color: #fefefe;
   margin: auto;
@@ -110,35 +120,33 @@
 }
 
 @media screen and (min-width: 600px) {
-  .modal-content {
+  .shoppable-modal__content {
     height: 70%;
   }
 }
 
-.modal-body {
+.shoppable-modal__body {
   padding: 0;
   position: relative;
   height: 100%;
 }
 
-/* Add Animation */
 @keyframes animatetop {
   from {top: -300px; opacity: 0}
   to {top: 0; opacity: 1}
 }
 
-/* The Close Button */
-.close {
+.shoppable-modal__close {
   color: #ffffff;
   font-size: 2.5rem;
   height: 2.5rem;
   position: absolute;
-  right: -2rem;
+  right: 0rem;
   top: -4rem
 }
 
-.close:hover,
-.close:focus {
+.shoppable-modal__close:hover,
+.shoppable-modal__close:focus {
   color: #dddddd;
   text-decoration: none;
   cursor: pointer;
