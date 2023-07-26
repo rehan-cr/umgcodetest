@@ -28,6 +28,6 @@ the page.
 - assets/cart-upsell.css
 ```
 Its upsell feature on the Cart. To utilize this feature we need to add 𝐂𝐚𝐫𝐭 𝐔𝐩𝐬𝐞𝐥𝐥 section in the cart page.
-I have provided a setting in customization from where we can set a particular product on Upsell for another product.  
-The Upsell product will only appear on cart when its pair product will be added to the cart.
+I have provided a setting in customization from where we can set a particular product on Upsell for another 
+product. The Upsell product will only appear on cart when its pair product will be added to the cart.
 ```
