@@ -1,6 +1,6 @@
 const upsellContainer = document.querySelector('.cart-upsell__container')
 const upsellBtn = upsellContainer.querySelector('.upsell-product__atc--button')
-upsellBtn.addEventListener('click', upsellAddToCart)
+upsellBtn ? upsellBtn.addEventListener('click', upsellAddToCart) : null
 
 const sectionRender = () => {
   fetch(window.location.pathname + '?sections=main-cart-items')
