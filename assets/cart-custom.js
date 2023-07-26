@@ -50,11 +50,11 @@ function cartRemove(e) {
 // Product quantity change 
 function updateQuantity(e) {
   e.preventDefault()
-  const plus = this.querySelector('.quantity__button[name="plus"]')
-  const minus = this.querySelector('.quantity__button[name="minus"]')
+  const plus = e.target.parentElement.querySelector('.quantity__button[name="plus"]')
+  const minus = e.target.parentElement.querySelector('.quantity__button[name="minus"]')
   plus.classList.add('disabled')
   minus.classList.add('disabled')
-  const input = this.querySelector('.quantity__input')
+  const input = e.target.parentElement.querySelector('.quantity__input')
   const inputQty = parseInt(input.value)
   const qtyVariantId = input.dataset.quantityVariantId
   const RowIndex = input.dataset.index
@@ -95,13 +95,13 @@ function updateQuantity(e) {
     });
 }
 
-const quantityChangeBtn = document.querySelectorAll('quantity-input');
-quantityChangeBtn.forEach((btn) => {
-  btn.addEventListener('click', updateQuantity)
-})
+// const quantityChangeBtn = document.querySelectorAll('quantity-input');
+// quantityChangeBtn.forEach((btn) => {
+//   btn.addEventListener('click', updateQuantity)
+// })
 
-const item = document.querySelectorAll('cart-remove-button');
-item.forEach((line) => {
-  line.addEventListener('click', cartRemove);
-})
+// const item = document.querySelectorAll('cart-remove-button');
+// item.forEach((line) => {
+//   line.addEventListener('click', cartRemove);
+// })
 

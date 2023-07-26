@@ -3,16 +3,18 @@ const upsellBtn = upsellContainer.querySelector('.upsell-product__atc--button')
 upsellBtn.addEventListener('click', upsellAddToCart)
 
 const sectionRender = () => {
-  fetch(window.location.pathname + "?sections=main-cart-items")
-  .then((res) => res.json())
-    .then((responseText) => {
-      console.log('section render console-->', responseText)
-      const html =  new DOMParser().parseFromString(JSON.stringify(responseText), 'text/html')
-      console.log('section render html-->', html)
-      const source = html.querySelector('cart-items');
-      console.log('section render source inner html-->', source.innerHTML)
-      document.getElementById('main-cart-items').querySelector('.js-contents').innerHTML = source.innerHTML; 
-    })
+  fetch(window.location.pathname + '?sections=main-cart-items')
+  .then(response => response.json())
+  .then(json => {
+      document.getElementsByTagName('cart-items')[0].parentElement.innerHTML = new DOMParser().parseFromString(json['main-cart-items'], 'text/html').documentElement.innerHTML;  
+  })
+
+  fetch(`${routes.cart_url}.js`)
+  .then(response => response.json())
+  .then(getCart => {
+    updateCartSubtotal(getCart.items_subtotal_price)
+  })
+
 }
 
 function upsellAddToCart (e) {
@@ -38,9 +40,13 @@ function upsellAddToCart (e) {
     .then((upsellResponse) => {
       console.log('Upsell item added:', upsellResponse);
       sectionRender()
-      //location.reload();
     })
     .catch((error) => {
       console.error('Error updating cart item:', error);
     });
 }
+
+
+
+
+
