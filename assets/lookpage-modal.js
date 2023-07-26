@@ -11,18 +11,18 @@ imgWrapper.forEach((wrapper, index) => {
   });
 });
 
-// When the user clicks on <span> (x), close the modal
 const modalClose = () => {
-  for (let i = 0; i < modalImgContainer.length; i++) {
-    modalImgContainer[i].style.display = 'none'
+  for (let img of modalImgContainer) {
+    img.style.display = 'none'
   }
   modal.style.display = 'none'
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.addEventListener('click', () => {
-if(event.target == modal) {
-    modalClose()
+window.addEventListener('click', (e) => {
+if(e.target == modal) {
+    // modalClose()
+    modal.style.display = 'none'
   }
 })
 
