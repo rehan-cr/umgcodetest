@@ -1,7 +1,6 @@
 # umgcodetest
-## [Store Preview](https://rehan-cr.myshopify.com/) , Preview password: ohsigo 
 ## Git Repo: https://github.com/rehan-cr/umgcodetest
-
+### [Store Preview](https://rehan-cr.myshopify.com/) , Preview password: ohsigo 
 ### Shoppable Lookpage - File changes:
 - assets/shoppable-lookpage.css
 - sections/shoppable-lookpage.liquid
