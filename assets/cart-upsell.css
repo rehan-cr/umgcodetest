@@ -16,4 +16,14 @@
   display: flex;
   max-width: 100%;
   margin: 0 auto;
+  border-radius: 0.4rem;
+}
+
+.upsell-product__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.icon-loading .path {
+  stroke: #ffffff;
 }

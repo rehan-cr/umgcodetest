@@ -18,24 +18,31 @@
     <tbody>
       <tr class="upsell-product__table-row">
         <td class="upsell-product__table-column">
+        <a href="{{ upsell_product.url }}">
           {{ upsell_product.featured_image | image_url: width: 150 | image_tag: class: "upsell-product__image" }}
+        </a>  
         </td>
         <td class="upsell-product__table-column">
           <div class="upsell-product__title" 
             data-variant-id="{{ upsell_product.selected_or_first_available_variant.id}}">
-            {{ upsell_product.title }}
+            <a href="{{ upsell_product.url }}" class="upsell-product__link">
+              {{ upsell_product.title }}
+            </a>
           </div>
           <div class="upsell-product__price">{{ upsell_product.price | money }}</div>
         </td>
         <td class="upsell-product__table-column">
           <div class="upsell-product__atc--button-wrapper">
             <button class="button button--primary upsell-product__atc--button">
-              <span>
+              <span class="upsell-atc__btn--label">
                 {%- if upsell_product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
                   {{ 'products.product.sold_out' | t }}
                 {%- else -%}
                   {{ 'products.product.add_to_cart' | t }}
                 {%- endif -%}
+              </span>
+              <span class="loading-overlay__spinner hidden">
+                {% render 'icon-loading' %}
               </span>
             </button>
           </div>

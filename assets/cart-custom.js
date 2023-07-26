@@ -95,13 +95,5 @@ function updateQuantity(e) {
     });
 }
 
-// const quantityChangeBtn = document.querySelectorAll('quantity-input');
-// quantityChangeBtn.forEach((btn) => {
-//   btn.addEventListener('click', updateQuantity)
-// })
 
-// const item = document.querySelectorAll('cart-remove-button');
-// item.forEach((line) => {
-//   line.addEventListener('click', cartRemove);
-// })
 

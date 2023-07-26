@@ -59,13 +59,13 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/img1.jpg",
             "product_1": "the-3p-fulfilled-snowboard",
-            "pulse_top_1": 10,
-            "pulse_left_1": 10,
+            "pulse_top_1": 24,
+            "pulse_left_1": 66,
             "product_2": "the-collection-snowboard-hydrogen",
             "pulse_top_2": 27,
-            "pulse_left_2": 40,
+            "pulse_left_2": 28,
             "product_3": "the-collection-snowboard-liquid",
-            "pulse_top_3": 30,
+            "pulse_top_3": 43,
             "pulse_left_3": 46
           }
         },
@@ -186,7 +186,8 @@
         "52ac9ace-5d4c-47de-b915-2c3bdfa54226"
       ],
       "settings": {
-        "title": "Joe's Lookbook"
+        "title": "Joe's Lookbook",
+        "cta_label": "Shop Now"
       }
     }
   },
