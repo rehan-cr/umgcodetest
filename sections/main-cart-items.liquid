@@ -222,7 +222,7 @@
                       <label class="visually-hidden" for="Quantity-{{ item.index | plus: 1 }}">
                         {{ 'products.product.quantity.label' | t }}
                       </label>
-                      <quantity-input class="quantity cart-quantity">
+                      <quantity-input class="quantity cart-quantity" onclick="updateQuantity(event)">
                         <button class="quantity__button no-js-hidden" name="minus" type="button">
                           <span class="visually-hidden">
                             {{- 'products.product.quantity.decrease' | t: product: item.product.title | escape -}}
@@ -259,6 +259,7 @@
                         id="Remove-{{ item.index | plus: 1 }}"
                         data-index="{{ item.index | plus: 1 }}"
                         data-variant="{{ item.variant_id }}"
+                        onclick="cartRemove(event)"
                       >
                         <a
                           href="{{ item.url_to_remove }}"
