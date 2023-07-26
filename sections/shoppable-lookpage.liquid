@@ -26,7 +26,7 @@
       {% for block in section.blocks %}
       <div class="modal-img__container" data-modal-img-container>
         {% if block.settings.image %}
-          {{ block.settings.image | image_url: width: 400 | image_tag: loading: "lazy", class: "shoppable_img" }}
+          {{ block.settings.image | image_url: width: 400 | image_tag: class: "shoppable_img" }}
         {% else %} 
           {{ "product-1" | placeholder_svg_tag: "placeholder-svg placeholder" }}
         {% endif %}
