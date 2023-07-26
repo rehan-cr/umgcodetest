@@ -18,7 +18,7 @@ add three products. Each dot's position is customizable. Shop Now label text is 
 - layout/theme.liquid
 - sections/main-cart-items.liquid
 ```
-I have created a custom ajax cart functionality. We can remove the product, change the quantity with reloading 
+I have created a custom ajax cart functionality. We can remove the product, change the quantity without reloading 
 the page.
 ```
 
