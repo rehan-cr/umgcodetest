@@ -13,3 +13,8 @@
 - snippets/modal-product-card.liquid
 - snippets/pulse.liquid
 - assets/lookpage-modal.js
+
+### Upsell on Cart - File Changes
+- assets/cart-upsell.js
+- sections/cart-upsell.liquid
+- assets/cart-upsell.css
