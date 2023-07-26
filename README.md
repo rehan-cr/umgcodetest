@@ -1,5 +1,5 @@
 # umgcodetest
-
+## [Store Preview](https://rehan-cr.myshopify.com/) , Preview password: ohsigo 
 ## Git Repo: https://github.com/rehan-cr/umgcodetest
 
 ### Shoppable Lookpage - File changes:
