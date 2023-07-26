@@ -46,8 +46,8 @@ function upsellAddToCart (e) {
       console.log('Upsell item added:', upsellResponse);
       sectionRender()
       upsellBtnLabel.classList.remove('hidden')
-      upsellBtnLabel.innerHTML = 'Added to cart'
       upsellLoading.classList.add('hidden')
+      upsellResponse.id == variantId ?  document.querySelector('.cart-upsell__container').classList.add('hidden') : null
     })
     .catch((error) => {
       console.error('Error updating cart item:', error);

@@ -10,7 +10,7 @@
 
 {% if cartItemHandle contains section.settings.product.handle %}
 {% assign upsell_product = all_products[section.settings.upsell_product] %}
-<div class="cart-upsell__container page-width">
+<div class="cart-upsell__container page-width {% if cartItemHandle contains upsell_product.handle %}hidden{% endif %}">
   <div class="upsell-title__wrapper">
     <h2 class="upsell-title">{{ section.settings.title }}</h2>
   </div>
