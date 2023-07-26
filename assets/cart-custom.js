@@ -13,6 +13,15 @@ const updateCartSubtotal = (subTotal) => {
   mainCartFooterSubtotal.innerHTML = Shopify.Currency.formatMoney(subTotal, Shopify.money_with_currency_format);
 }
 
+// section rendering with the help of Shopify Section API
+const cartItemsRender = () => {
+  fetch(window.location.pathname + '?sections=main-cart-items')
+  .then(response => response.json())
+  .then(json => {
+      document.getElementsByTagName('cart-items')[0].parentElement.innerHTML = new DOMParser().parseFromString(json['main-cart-items'], 'text/html').documentElement.innerHTML;  
+  })
+}
+
 // Product removal from Cart
 function cartRemove(e) {
   e.preventDefault();
@@ -37,10 +46,13 @@ function cartRemove(e) {
     .then((response) => response.json())
     .then((cart) => {
       console.log('Cart item removed:', cart);
-      document.querySelector('.cart-items').deleteRow(tableRow)
-      updateCartBubble(cart.item_count)
+      //document.querySelector('.cart-items').deleteRow(tableRow)
+      cartItemsRender()
       updateCartSubtotal(cart.total_price)
+      updateCartBubble(cart.item_count)
       cartRemoveButton.classList.remove('disabled')
+      cart.item_count === 0 ? document.querySelector('#main-cart-footer').classList.add('hidden') : null
+      cart.item_count === 0 ? document.querySelector('.cart-upsell__container').classList.add('hidden') : null
     })
     .catch((error) => {
       console.error('Error updating cart item:', error);
