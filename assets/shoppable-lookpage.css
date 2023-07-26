@@ -29,7 +29,8 @@
 }
 
 .shoppable_img,
-.shoppable-lookpage__image--wrapper .placeholder {
+.shoppable-lookpage__image--wrapper .placeholder,
+.placeholder-svg {
   max-width: 100%;
   width: 100%;
   height: 100%;
@@ -43,6 +44,7 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  height: 30rem;
 }
 
 .shoppable-lookpage__image--wrapper::before {
@@ -235,3 +237,6 @@
   height: 2rem;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}

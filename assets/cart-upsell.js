@@ -1,7 +1,10 @@
+
 const upsellContainer = document.querySelector('.cart-upsell__container')
 const upsellBtn = upsellContainer.querySelector('.upsell-product__atc--button')
 upsellBtn ? upsellBtn.addEventListener('click', upsellAddToCart) : null
 
+
+// section rendering with the help of Shopify Section API
 const sectionRender = () => {
   fetch(window.location.pathname + '?sections=main-cart-items')
   .then(response => response.json())
@@ -14,15 +17,14 @@ const sectionRender = () => {
   .then(getCart => {
     updateCartSubtotal(getCart.items_subtotal_price)
   })
-
 }
 
+// Adding upsell product to the cart
 function upsellAddToCart (e) {
   e.preventDefault()
   const upsellProduct = upsellContainer.querySelector('.upsell-product__title')
   const variantId = upsellProduct.dataset.variantId;
   console.log(variantId)
-
 
   const data = {
     id: variantId,

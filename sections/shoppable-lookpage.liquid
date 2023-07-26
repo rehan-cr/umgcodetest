@@ -1,6 +1,12 @@
 {{ 'shoppable-lookpage.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'lookpage-modal.js' | asset_url }}" defer="defer"></script>
 
+<style>
+  .shoppable-lookpage__image--wrapper::after {
+    content: '{{ section.settings.cta_label }}';
+  }
+</style>
+
 <div class="shoppable-lookpage__wrapper page-width">
   <div class="shoppable-lookpage__title--wrapper">
     <h2 class="shoppable-lookpage__title">{{ section.settings.title }}</h2>
@@ -31,19 +37,19 @@
           {{ "product-1" | placeholder_svg_tag: "placeholder-svg placeholder" }}
         {% endif %}
         <div class="modal-product__container">
-          <div class="modal-pulse__wrapper pulse-pos_1">
+          <div class="modal-pulse__wrapper pulse-pos_1-{{block.id}}">
           {% if block.settings.product_1 %}
             {% render 'pulse' %}
             {% render 'modal-product-card' product: block.settings.product_1 %}
           {% endif %}
           </div>
-          <div class="modal-pulse__wrapper pulse-pos_2">
+          <div class="modal-pulse__wrapper pulse-pos_2-{{block.id}}">
           {% if block.settings.product_2 %}
             {% render 'pulse' %}
             {% render 'modal-product-card' product: block.settings.product_2 %}
           {% endif %}
           </div>
-          <div class="modal-pulse__wrapper pulse-pos_3">
+          <div class="modal-pulse__wrapper pulse-pos_3-{{block.id}}">
           {% if block.settings.product_3 %}
             {% render 'pulse' %}
             {% render 'modal-product-card' product: block.settings.product_3 %}
@@ -52,20 +58,17 @@
         </div>
       </div>
       <style>
-        .pulse-pos_1 {
+        .pulse-pos_1-{{block.id}} {
           top: {{ block.settings.pulse_top_1 }}%;
           left: {{ block.settings.pulse_left_1 }}%;
         }
-        .pulse-pos_2 {
+        .pulse-pos_2-{{block.id}} {
           top: {{ block.settings.pulse_top_2 }}%;
           left: {{ block.settings.pulse_left_2 }}%;
         }
-        .pulse-pos_3 {
+        .pulse-pos_3-{{block.id}} {
           top: {{ block.settings.pulse_top_3 }}%;
           left: {{ block.settings.pulse_left_3 }}%;
-        }
-        .shoppable-lookpage__image--wrapper::after {
-          content: '{{ section.settings.cta_label }}';
         }
       </style>
       {% endfor %}
