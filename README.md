@@ -32,5 +32,6 @@ in the cart page. I have provided a setting in customization from where we can s
 particular product on Upsell for another product. The Upsell product will only appear 
 on cart when its pair product will be added to the cart. There is a default title of the 
 section which changes when product will be changed from the customization settings.
-Also you can overwrite that default title of section.
+Also you can overwrite that default title of section. To update the section I am using 
+Shopify section rendering API.
 ```
