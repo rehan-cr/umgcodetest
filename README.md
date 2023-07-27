@@ -30,5 +30,7 @@ quantity without reloading the page.
 Its upsell feature on the Cart. To utilize this feature we need to add 𝐂𝐚𝐫𝐭 𝐔𝐩𝐬𝐞𝐥𝐥 section
 in the cart page. I have provided a setting in customization from where we can set a 
 particular product on Upsell for another product. The Upsell product will only appear 
-on cart when its pair product will be added to the cart.
+on cart when its pair product will be added to the cart. There is a default title of the 
+section which changes when product will be changed from the customization settings.
+Also you can overwrite that default section title.
 ```
