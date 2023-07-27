@@ -470,5 +470,8 @@
       "message": "Message",
       "max_characters": "{{ max_chars }} characters max"
     }
+  },
+  "upsell": {
+    "title": "Frequently bought with"
   }
 }

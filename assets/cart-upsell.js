@@ -47,14 +47,16 @@ function upsellAddToCart (e) {
       sectionRender()
       upsellBtnLabel.classList.remove('hidden')
       upsellLoading.classList.add('hidden')
-      upsellResponse.id == variantId ?  document.querySelector('.cart-upsell__container').classList.add('hidden') : null
+      upsellResponse.id == variantId ?  upsellContainer.classList.add('hidden') : null
     })
     .catch((error) => {
       console.error('Error updating cart item:', error);
     });
 }
 
-
-
+// Upsell product is added back to the Upsell section
+const upsellProductRemoved = (items) => {
+  !items.includes(window.upsellVariant) ? upsellContainer.classList.remove('hidden') : null
+};
 
 

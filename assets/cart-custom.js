@@ -46,10 +46,10 @@ function cartRemove(e) {
     .then((response) => response.json())
     .then((cart) => {
       console.log('Cart item removed:', cart);
-      //document.querySelector('.cart-items').deleteRow(tableRow)
-      cartItemsRender()
-      updateCartSubtotal(cart.total_price)
-      updateCartBubble(cart.item_count)
+      cartItemsRender() // Cart rendering 
+      updateCartSubtotal(cart.total_price) // Cart subtotal update
+      updateCartBubble(cart.item_count) // Cart bubble/count update
+      upsellProductRemoved(cart.items) // Check for upsell product removal
       cartRemoveButton.classList.remove('disabled')
       cart.item_count === 0 ? document.querySelector('#main-cart-footer').classList.add('hidden') : null
       cart.item_count === 0 ? document.querySelector('.cart-upsell__container').classList.add('hidden') : null
