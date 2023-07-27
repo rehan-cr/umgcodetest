@@ -10,9 +10,9 @@
     "4ac3f05c-239d-4caf-b3fe-0fcfed3386bf": {
       "type": "cart-upsell",
       "settings": {
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "title": "Frequently bought with Pink Armchair",
+        "padding_top": 0,
+        "padding_bottom": 20,
+        "title": "",
         "product": "pink-armchair",
         "upsell_product": "antique-drawers"
       }
