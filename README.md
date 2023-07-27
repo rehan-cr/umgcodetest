@@ -30,7 +30,11 @@ quantity without reloading the page.
 Its upsell feature on the Cart. To utilize this feature we need to add 𝐂𝐚𝐫𝐭 𝐔𝐩𝐬𝐞𝐥𝐥 section
 in the cart page. I have provided a setting in customization from where we can set a 
 particular product on Upsell for another product. The Upsell product will only appear 
-on cart when its pair product will be added to the cart. There is a default title of the 
+on cart when its pair product will be added to the cart. When we click on the Add to Cart button 
+of Upsell section the Upsell Product will be moved to the Cart and Upsell section be will hidden.
+It's reverse condition is also followed when we remove the Upsell product from the Cart it be 
+moved again to the Upsell section and Cart will be updated accordingly.
+There is a default title of the 
 section which changes when product will be changed from the customization settings.
 Also you can overwrite that default title of section. To update the section I am using 
 Shopify section rendering API.
