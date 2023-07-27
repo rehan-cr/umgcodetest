@@ -8,9 +8,9 @@
 - snippets/pulse.liquid
 - assets/lookpage-modal.js
 ```
-In Shoppable Lookbook section we have grid layout. We can add as many as rows we want. 
-On each image we can add three products. Each dot's position is customizable. 
-Shop Now label text is customizable.
+In Shoppable Lookbook section we have grid layout. We can add as many as rows & columns we want. 
+On each image we can add three products. Clicking on each image it  will open a modal and in the 
+modal we have three dots. Each dot's position is customizable. Shop Now label text is customizable.
 ```
 
 ### Ajax Cart - File changes:
@@ -32,5 +32,5 @@ in the cart page. I have provided a setting in customization from where we can s
 particular product on Upsell for another product. The Upsell product will only appear 
 on cart when its pair product will be added to the cart. There is a default title of the 
 section which changes when product will be changed from the customization settings.
-Also you can overwrite that default section title.
+Also you can overwrite that default title of section.
 ```
